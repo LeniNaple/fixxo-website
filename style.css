@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+:root {
+
+    --color-white: #ffffff;
+    --color-gray-1: #f5f5f5;
+    --color-gray-2: #e6e6e6;
+    --color-gray-3: #bebebe;
+    --color-gray-4: #616365;
+    --color-font-main: #222529;
+    --color-dark: #23262a;
+    --color-theme-red: #ff7373;
+
+    --font-poppins:'poppins', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
+
+    --font-size-13: 1.08rem;
+    --font-size-16: 1.33rem;
+    --font-size-18: 1.5rem;
+    --font-size-20: 1.67rem;
+    --font-size-35: 2.92rem;
+    --font-size-45: 3.76rem;
+    --font-size-65: 5.43rem;
+
+}
+
+body {
+    line-height: 1.50;
+    font-family: var(--font-poppins);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-font-main);
+    background-color: var(--color-white);
+}
+
+/* Black button -> red */
+.btn-theme-dark {
+    height: 60px;
+    width: 190px;
+    background-color: var(--color-dark);
+    border: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    transition: background 200ms ease-in-out;
+}
+    .btn-theme-dark p {
+        margin: 0;
+        font-weight: var(--font-size-16);
+        font-weight: var(--font-weight-semi-bold);   
+    } 
+        .btn-theme-dark:hover {
+            background-color: var(--color-theme-red);
+        }
+        .btn-theme-dark .line-button-l-1 {
+            position: absolute;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-white);
+            top: 10px;
+            left: 10px;
+            width: 20px;
+        }
+        .btn-theme-dark .line-button-l-2 {
+            position: absolute;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-white);
+            top: 10px;
+            left: 10px;
+            height: 20px;
+        }
+        .btn-theme-dark .line-button-r-1 {
+            position: absolute;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-white);
+            bottom: 10px;
+            right: 10px;
+            width: 20px;
+        }
+        .btn-theme-dark .line-button-r-2 {
+            position: absolute;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-white);
+            bottom: 10px;
+            right: 10px;
+            height: 20px;
+        }
+
+/* White button -> red */
+.btn-theme-white {
+    height: 60px;
+    width: 190px;
+    background-color: var(--color-white);
+    border: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-font-main);
+    transition: background 200ms ease-in-out;
+}
+    .btn-theme-white p {
+        margin: 0;
+        font-weight: var(--font-size-16);
+        font-weight: var(--font-weight-semi-bold);   
+    } 
+        .btn-theme-white:hover {
+            background-color: var(--color-theme-red);
+        }
+        .btn-theme-white .line-button-l-1 {
+            position: absolute;
+            background-color: var(--color-font-main);
+            border: 1px solid var(--color-font-main);
+            top: 10px;
+            left: 10px;
+            width: 20px;
+        }
+        .btn-theme-white .line-button-l-2 {
+            position: absolute;
+            background-color: var(--color-font-main);
+            border: 1px solid var(--color-font-main);
+            top: 10px;
+            left: 10px;
+            height: 20px;
+        }
+        .btn-theme-white .line-button-r-1 {
+            position: absolute;
+            background-color: var(--color-font-main);
+            border: 1px solid var(--color-font-main);
+            bottom: 10px;
+            right: 10px;
+            width: 20px;
+        }
+        .btn-theme-white .line-button-r-2 {
+            position: absolute;
+            background-color: var(--color-font-main);
+            border: 1px solid var(--color-font-main);
+            bottom: 10px;
+            right: 10px;
+            height: 20px;
+        }
+
+/* Red button -> black */
+.btn-theme-red {
+    height: 60px;
+    width: 190px;
+    background-color: var(--color-theme-red);
+    border: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    transition: background 200ms ease-in-out;
+}
+    .btn-theme-red p {
+        margin: 0;
+        font-weight: var(--font-size-16);
+        font-weight: var(--font-weight-semi-bold);   
+    } 
+        .btn-theme-red:hover {
+            background-color: var(--color-dark);
+        }
+        .btn-theme-red .line-button-l-1 {
+            position: absolute;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-white);
+            top: 10px;
+            left: 10px;
+            width: 20px;
+        }
+        .btn-theme-red .line-button-l-2 {
+            position: absolute;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-white);
+            top: 10px;
+            left: 10px;
+            height: 20px;
+        }
+        .btn-theme-red .line-button-r-1 {
+            position: absolute;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-white);
+            bottom: 10px;
+            right: 10px;
+            width: 20px;
+        }
+        .btn-theme-red .line-button-r-2 {
+            position: absolute;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-white);
+            bottom: 10px;
+            right: 10px;
+            height: 20px;
+        }
+
+
+
+.featured-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .featured-product > p {
+        font-size: var(--font-size-20);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-font-main);
+    }
+
+.featured-product .grid {
+    display: flex;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    background-color: var(--color-white);
+}
+    .card .card-box {
+        height: 210px;
+        width: 255px;
+        background-color: var(--color-gray-1);
+    }
+    .card .card-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--color-white);
+        width: 100%;
+        z-index: 1;
+    }
+        .card .card-text p {
+            color: var(--color-gray-4);
+            font-size: var(--font-size-13);
+            font-weight: var(--font-weight-medium);
+            margin-bottom: .2rem;
+            margin-top: .5rem;
+        }
+        .card .card-text h1 {
+            color: var(--color-font-main);
+            font-size: var(--font-size-16);
+            font-weight: var(--font-weight-semi-bold);
+            margin: 0 0 .3rem 0;
+        }
+        .card .card-text .card-stars {
+            color: var(--color-theme-red);
+            margin: 0 0 .2rem 0;
+        }
+            .card .card-text .card-stars i {
+                margin: 0 0.05rem;
+            }
+        .card .card-text h2 {
+            color: var(--color-font-main);
+            font-size: var(--font-size-18);
+            font-weight: var(--font-weight-semi-bold);
+            margin: 0 0 .3rem 0;
+        }
+        .card .card-text h2 span {
+            color: var(--color-font-main);
+            font-weight: var(--font-weight-regular);
+            font-size: var(--font-size-16);
+            text-decoration: line-through;
+            color: var(--color-gray-4);
+        }
+
+
+        .card .card-box {
+            position: relative;
+        }
+
+        .card .card-box .card-quick-view {
+            position: absolute;
+            bottom: -100px;
+            width: 100%;
+            transition: bottom 200ms ease-in-out;
+        }
+            .card:hover .card-box .card-quick-view {
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                width: 100%;
+            }
+                .card .card-box .card-quick-view .btn-theme-red {
+                    width: 100%;
+                }
+                    .card .card-box .card-quick-view .btn-theme-red p {
+                        font-weight: var(--font-weight-regular);
+                        font-size: var(--font-size-13);
+                    }
