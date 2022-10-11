@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
-
 :root {
 
     --color-white: #ffffff;
@@ -11,6 +10,7 @@
     --color-font-main: #222529;
     --color-dark: #23262a;
     --color-theme-red: #ff7373;
+    --color-gray-card: #CDCED0;
 
     --font-poppins:'poppins', sans-serif;
     --font-weight-regular: 400;
@@ -20,6 +20,7 @@
     --font-weight-extra-bold: 800;
 
     --font-size-13: 1.08rem;
+    --font-size-14: 1.17rem;
     --font-size-16: 1.33rem;
     --font-size-18: 1.5rem;
     --font-size-20: 1.67rem;
@@ -29,6 +30,7 @@
 
 }
 
+/* General */
 body {
     line-height: 1.50;
     font-family: var(--font-poppins);
@@ -199,24 +201,7 @@ body {
             height: 20px;
         }
 
-
-
-.featured-product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-    .featured-product > p {
-        font-size: var(--font-size-20);
-        font-weight: var(--font-weight-bold);
-        color: var(--color-font-main);
-    }
-
-.featured-product .grid {
-    display: flex;
-}
-
-
+/* Vertical cards */
 .card {
     display: flex;
     flex-direction: column;
@@ -224,12 +209,8 @@ body {
     justify-content: center;
     border-radius: 0;
     background-color: var(--color-white);
+    border: none;
 }
-    .card .card-box {
-        height: 210px;
-        width: 255px;
-        background-color: var(--color-gray-1);
-    }
     .card .card-text {
         display: flex;
         flex-direction: column;
@@ -271,12 +252,50 @@ body {
             text-decoration: line-through;
             color: var(--color-gray-4);
         }
-
-
-        .card .card-box {
-            position: relative;
+    .card .card-box {
+        height: 210px;
+        width: 255px;
+        background-color: var(--color-gray-1);
+        position: relative;
+        overflow: hidden;
+        transition: background 200ms ease-in-out;
+    }
+        .card:hover .card-box {
+            background-color: var(--color-gray-card);
         }
-
+        .card .card-box .card-interaction {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 250px;
+            right: 10px;
+            transition: top 200ms ease-in-out;
+        }
+            .card:hover .card-box .card-interaction {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+            .card .card-box .card-interaction .card-balls {
+                width: 36px;
+                height: 36px;
+                background-color: var(--color-white);
+                border-radius: 50%;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 200ms ease-in-out;
+            }
+                .card .card-box .card-interaction .card-balls:hover {
+                    background-color: var(--color-dark);
+                    color: var(--color-white);
+                }
+                .card .card-box .card-interaction .card-balls i {
+                    font-size: var(--font-size-14);
+                }
         .card .card-box .card-quick-view {
             position: absolute;
             bottom: -100px;
@@ -296,3 +315,36 @@ body {
                         font-weight: var(--font-weight-regular);
                         font-size: var(--font-size-13);
                     }
+
+
+
+.featured-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    .featured-product .container {
+        max-width: 1110px;
+        align-items: center;
+        justify-content: center;
+    }
+    .featured-product > p {
+        font-size: var(--font-size-20);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-font-main);
+    }
+
+    .featured-product .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 255px);
+        gap: 22px;
+    }
+
+
+    
+
+
+
+
+
