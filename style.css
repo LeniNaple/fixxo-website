@@ -318,6 +318,9 @@ body {
 
 
 
+
+
+/* Grid function */
 .featured-product {
     display: flex;
     flex-direction: column;
@@ -334,7 +337,6 @@ body {
         font-weight: var(--font-weight-bold);
         color: var(--color-font-main);
     }
-
     .featured-product .grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, 255px);
